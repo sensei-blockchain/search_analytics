@@ -11,6 +11,7 @@ To search an article users can just start typing in the search box and already s
 - Postgres
 - Sidekiq
 
+NOTE: I have used webpacker for frontend assets, please look into app/front_end for JS and CSS.
 
 # Technical Overview
 
