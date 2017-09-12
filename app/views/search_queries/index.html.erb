@@ -1,0 +1,29 @@
+<table class="striped bordered responsive-table">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>
+        <a class="waves-effect waves-light btn reset-all-analytics">Reset All</a>
+      </th>
+    </tr>
+    <tr>
+        <th>Search query</th>
+        <th>Hits</th>
+        <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @search_queries.each do |search_query| %>
+      <tr>
+        <td><%= search_query.query %></td>
+        <td id="search_query_hits_<%= search_query.id %>" class="search-query-hits"><%= search_query.hits %></td>
+        <td>
+          <a class="waves-effect waves-light btn analytic-reset" data-id="<%= search_query.id %>">Reset</a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<div><%= paginate @search_queries %></div>
